@@ -113,7 +113,7 @@ const title = ref('Ablyy-智能助手 用户注册');
 const formData = ref({
   mobile: '',
   password: '',
-  code: '',
+  code: 0,
   repass: '',
 })
 const formRef = ref(null)
