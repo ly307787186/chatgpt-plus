@@ -165,19 +165,16 @@ func (h *ChatHandler) sendMessage(ctx context.Context, session *types.ChatSessio
 
 	if userVo.Status == false {
 		utils.ReplyMessage(ws, "您的账号已经被禁用，如果疑问，请联系管理员！")
-		utils.ReplyMessage(ws, "![](/images/wx.png)")
 		return nil
 	}
 
 	if userVo.Calls <= 0 && userVo.ChatConfig.ApiKeys[session.Model.Platform] == "" {
 		utils.ReplyMessage(ws, "您的对话次数已经用尽，请联系管理员或者点击左下角菜单加入众筹获得100次对话！")
-		utils.ReplyMessage(ws, "![](/images/wx.png)")
 		return nil
 	}
 
 	if userVo.ExpiredTime > 0 && userVo.ExpiredTime <= time.Now().Unix() {
 		utils.ReplyMessage(ws, "您的账号已经过期，请联系管理员！")
-		utils.ReplyMessage(ws, "![](/images/wx.png)")
 		return nil
 	}
 	var req = types.ApiRequest{

@@ -58,7 +58,7 @@ import {useRoute} from 'vue-router';
 import {httpGet} from "@/utils/http";
 import {ElMessage} from "element-plus";
 
-const title = ref('Chat-Plus-Admin')
+const title = ref('Ablyy-智能助手')
 const logo = ref('/images/logo.png')
 
 // 加载系统配置
@@ -71,44 +71,39 @@ httpGet('/api/admin/config/get?key=system').then(res => {
 const items = [
   {
     icon: 'home',
-    index: '/admin/dashboard',
+    index: '/ablyy/dashboard',
     title: '仪表盘',
   },
 
   {
     icon: 'user-fill',
-    index: '/admin/user',
+    index: '/ablyy/user',
     title: '用户管理',
   },
 
   {
     icon: 'role',
-    index: '/admin/role',
+    index: '/ablyy/role',
     title: '角色管理',
   },
   {
     icon: 'api-key',
-    index: '/admin/apikey',
+    index: '/ablyy/apikey',
     title: 'API-KEY',
   },
   {
     icon: 'model',
-    index: '/admin/chat/model',
+    index: '/ablyy/chat/model',
     title: '语言模型',
   },
   {
-    icon: 'reward',
-    index: '/admin/reward',
-    title: '众筹管理',
-  },
-  {
     icon: 'config',
-    index: '/admin/system',
+    index: '/ablyy/system',
     title: '系统设置',
   },
   {
     icon: 'log',
-    index: '/admin/loginLog',
+    index: '/ablyy/loginLog',
     title: '用户登录日志',
   },
   {
@@ -117,19 +112,19 @@ const items = [
     title: '常用模板页面',
     subs: [
       {
-        index: '/admin/demo/form',
+        index: '/ablyy/demo/form',
         title: '表单页面',
       },
       {
-        index: '/admin/demo/table',
+        index: '/ablyy/demo/table',
         title: '常用表格',
       },
       {
-        index: '/admin/demo/import',
+        index: '/ablyy/demo/import',
         title: '导入Excel',
       },
       {
-        index: '/admin/demo/editor',
+        index: '/ablyy/demo/editor',
         title: '富文本编辑器',
       },
     ],

@@ -60,7 +60,7 @@ import {setUserToken} from "@/store/session";
 import {validateMobile} from "@/utils/validate";
 
 const router = useRouter();
-const title = ref('ChatGPT-PLUS 用户登录');
+const title = ref('Ablyy-智能助手 用户登录');
 const username = ref(process.env.VUE_APP_USER);
 const password = ref(process.env.VUE_APP_PASS);
 

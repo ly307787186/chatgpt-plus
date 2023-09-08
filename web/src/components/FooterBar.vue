@@ -10,8 +10,8 @@
 
 import {ref} from "vue";
 
-const title = ref('ChatGPT-Plus-V3')
-const author = ref('极客学长')
+const title = ref('测控五部')
+const author = ref('北京冶自欧博科技发展有限公司')
 </script>
 
 <style scoped lang="stylus">

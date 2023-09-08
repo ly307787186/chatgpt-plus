@@ -44,7 +44,6 @@ func (h *ChatHandler) sendChatGLMMessage(
 		}
 
 		utils.ReplyMessage(ws, ErrorMsg)
-		utils.ReplyMessage(ws, "![](/images/wx.png)")
 		return err
 	} else {
 		defer response.Body.Close()

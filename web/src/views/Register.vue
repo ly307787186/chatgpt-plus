@@ -107,11 +107,9 @@ import {useRouter} from "vue-router";
 import FooterBar from "@/components/FooterBar.vue";
 import SendMsg from "@/components/SendMsg.vue";
 import {validateMobile} from "@/utils/validate";
-import {isMobile} from "@/utils/libs";
-import SendMsgMobile from "@/components/SendMsg.vue";
 
 const router = useRouter();
-const title = ref('ChatGPT-PLUS 用户注册');
+const title = ref('Ablyy-智能助手 用户注册');
 const formData = ref({
   mobile: '',
   password: '',

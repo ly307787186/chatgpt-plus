@@ -35,7 +35,7 @@ const router = useRouter();
 checkAdminSession().then(() => {
   isLogin.value = true
 }).catch(() => {
-  router.replace('/admin/login')
+  router.replace('/ablyy/login')
 })
 </script>
 

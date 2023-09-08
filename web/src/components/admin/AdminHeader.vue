@@ -38,17 +38,6 @@
 					</span>
           <template #dropdown>
             <el-dropdown-menu>
-
-              <a href="https://github.com/yangjian102621/chatgpt-plus" target="_blank">
-                <el-dropdown-item>
-                  <i class="iconfont icon-github"></i>
-                  <span>ChatGPT-Plus-V3</span>
-                </el-dropdown-item>
-              </a>
-              <el-dropdown-item @click="showDialog = true">
-                <i class="iconfont icon-reward"></i>
-                <span>打赏作者</span>
-              </el-dropdown-item>
               <el-dropdown-item divided @click="logout">
                 <i class="iconfont icon-logout"></i>
                 <span>退出登录</span>
@@ -58,21 +47,6 @@
         </el-dropdown>
       </div>
     </div>
-
-    <el-dialog
-        v-model="showDialog"
-        :show-close="true"
-        class="donate-dialog"
-        width="400px"
-        title="请作者喝杯咖啡"
-    >
-      <el-alert type="info" :closable="false">
-        <p>如果你觉得这个项目对你有帮助，并且情况允许的话，可以请作者喝杯咖啡，非常感谢你的支持～</p>
-      </el-alert>
-      <p>
-        <el-image :src="donateImg"/>
-      </p>
-    </el-dialog>
   </div>
 </template>
 <script setup>
@@ -85,8 +59,6 @@ import {ElMessage} from "element-plus";
 
 const message = ref(5);
 const avatar = ref('/images/user-info.jpg')
-const donateImg = ref('/images/wechat-pay.png')
-const showDialog = ref(false)
 const sidebar = useSidebarStore();
 const router = useRouter();
 const breadcrumb = ref([])
@@ -152,7 +124,7 @@ onMounted(() => {
 
 const logout = function () {
   httpGet("/api/admin/logout").then(() => {
-    router.replace('/admin/login')
+    router.replace('/ablyy/login')
   }).catch((e) => {
     ElMessage.error("注销失败: " + e.message);
   })

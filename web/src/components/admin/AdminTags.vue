@@ -45,7 +45,7 @@ checkAdminSession().catch(() => {
     title: '提示',
     message: "当前会话已经失效，请重新登录",
     confirmButtonText: 'OK',
-    callback: () => router.replace('/admin/login')
+    callback: () => router.replace('/ablyy/login')
   });
 })
 const isActive = (path) => {
@@ -62,7 +62,7 @@ const closeTags = (index) => {
   if (item) {
     delItem.path === route.fullPath && router.push(item.path);
   } else {
-    router.push('/admin');
+    router.push('/ablyy');
   }
 };
 
@@ -88,7 +88,7 @@ onBeforeRouteUpdate(to => {
 // 关闭全部标签
 const closeAll = () => {
   tags.clearTags();
-  router.push('/admin');
+  router.push('/ablyy');
 };
 // 关闭其他标签
 const closeOther = () => {
